@@ -1,6 +1,6 @@
 # FP&A Financial Model
 
-An independently built FP&A financial model developed in Microsoft Excel to demonstrate practical financial modeling, forecasting, debt analysis, and sensitivity analysis skills.
+An independently built FP&A financial model developed in Microsoft Excel to demonstrate practical skills in financial modeling, forecasting, debt analysis, and sensitivity analysis.
 
 ## Project Overview
 
@@ -8,15 +8,13 @@ This project focuses on building an integrated financial model that connects ope
 
 The model was developed independently using a publicly available dataset sourced from Kaggle.
 
-The objective was to move beyond basic financial analysis and build a structured model that demonstrates how operating performance, financing decisions, and key assumptions flow through a business's financial statements.
+The objective was to build a structured model that demonstrates how operating performance, financing decisions, and key assumptions flow through a business's financial statements and ultimately affect profitability.
 
 ## What the Model Includes
 
-The workbook contains three main components:
+### Financial Statements
 
-### 1. Financial Statements
-
-The core financial model incorporates:
+The core model incorporates:
 
 - Income Statement
 - Balance Sheet
@@ -35,39 +33,37 @@ The statements are designed to work together as an integrated financial model.
 
 All financial figures are presented in ₹.
 
-### 2. Debt Schedule
+### Debt Schedule
 
-A supporting debt schedule was built to model the company's financing position.
+A supporting debt schedule was developed to model the company's financing position.
 
 It includes:
 
 - Beginning debt balance
-- Debt movements
+- Debt issuance
 - Principal repayment
 - Ending debt balance
 - Interest expense
 - Interest-rate assumptions
 
-The debt schedule is incorporated into the broader financial model so that financing activity flows through to interest expense and the financial statements.
+The debt schedule connects financing assumptions with the broader financial model and interest expense calculations.
 
-### 3. Sensitivity Analysis
+### Sensitivity Analysis
 
-A sensitivity analysis was created to evaluate how changes in key operating assumptions affect profitability.
+A two-variable sensitivity analysis was created to evaluate how changes in key operating assumptions affect projected net income.
 
-The analysis examines the effect of changes in:
+The analysis varies:
 
-- Units sold
-- Cost of Goods Sold percentage
+- Units Sold
+- Cost of Goods Sold as a percentage of Revenue
 
-on projected net income.
-
-This provides a simple scenario-based view of how changes in operating assumptions can influence financial performance.
+The resulting scenarios are compared against the base-case net income to evaluate the impact of changes in operating assumptions on profitability.
 
 ## Dataset
 
-The underlying dataset was sourced from Kaggle.
+The underlying operating dataset was sourced from Kaggle.
 
-The dataset contains operating-level information including:
+The dataset contains information including:
 
 - Month
 - Product
@@ -78,52 +74,114 @@ The dataset contains operating-level information including:
 
 Revenue is derived from the underlying operating data.
 
-The dataset served as the starting point for the financial model, while the financial statements, assumptions, debt schedule, forecasts, and sensitivity analysis were developed independently.
-
-## Skills Demonstrated
-
-### Financial Modeling
-
-- Three-statement financial modeling
-- Financial forecasting
-- Integrated financial statements
-- Assumption-driven modeling
-- Revenue modeling
-- Expense modeling
-- Debt scheduling
-- Interest expense modeling
-- Sensitivity analysis
-- Scenario analysis
-
-### FP&A
-
-- Budgeting and forecasting concepts
-- Financial performance analysis
-- Forecast modeling
-- Variance-oriented thinking
-- Profitability analysis
-- Scenario planning
-- Supporting management-style financial analysis
-
-### Excel
-
-- Formula-driven modeling
-- Linked financial schedules
-- Structured financial statements
-- Financial assumptions
-- Debt schedules
-- Sensitivity analysis
-- Model organization
+The dataset served as the starting point for the analysis, while the financial statements, assumptions, forecasts, debt schedule, and sensitivity analysis were independently developed in Excel.
 
 ## Model Structure
 
+The model is organized around the following components:
+
+### 1. Financial Statements
+
+The core three-statement model contains:
+
+- Income Statement
+- Balance Sheet
+- Cash Flow Statement
+- Revenue assumptions
+- Unit volume assumptions
+- Price per unit assumptions
+- COGS as % of Revenue
+- SG&A as % of Revenue
+- Tax rate
+- Working capital assumptions
+- Long-term debt assumptions
+- Interest expense assumptions
+
+The financial statements are forecast from 2026F to 2030F using the underlying operating and financial assumptions.
+
+### 2. Supporting Schedules
+
+Supporting schedules drive key components of the financial statements.
+
+#### Fixed Assets Schedule
+
+- Capital expenditures
+- Existing asset useful life
+- New asset useful life
+- Existing asset depreciation
+- New asset depreciation
+- Total depreciation
+- Beginning PP&E
+- Ending PP&E
+
+#### Retained Earnings Schedule
+
+- Beginning retained earnings
+- Net income
+- Dividends
+- Ending retained earnings
+
+#### Revolver Schedule
+
+- Available cash
+- Beginning cash balance
+- Cash from operations
+- Cash from investing activities
+- Debt movements
+- Common stock movements
+- Dividends
+- Cash available for revolver
+- Revolver balance
+- Revolver interest rate
+- Interest expense
+
+### 3. Sensitivity Analysis
+
+The sensitivity analysis evaluates the effect of changes in:
+
+- Units Sold
+- COGS as a percentage of Revenue
+
+on projected net income.
+
+This provides a scenario-based view of how changes in key operating assumptions can influence profitability.
+
+## Model Flow
+
 ```text
+Operating Assumptions
+        │
+        ▼
+Financial Statements
+        │
+        ├── Income Statement
+        ├── Balance Sheet
+        └── Cash Flow Statement
+        │
+        ▼
+Supporting Schedules
+        │
+        ├── Fixed Assets
+        ├── Retained Earnings
+        └── Revolver
+        │
+        ▼
+Sensitivity Analysis
+```
+
+### Repository Structure ###
+
 FPA-Financial-Model/
 │
 ├── FPA_Financial_Model.xlsx
 ├── README.md
 │
 └── screenshots/
-    ├── financial-statements.png
-    ├── debt-schedule.png
-    └── sensitivity-analysis.png
+    ├── 01-financial-statements.png
+    ├── 02-cash-flow-and-assumptions.png
+    ├── 03-supporting-schedules.png
+    ├── 04-sensitivity-analysis.png
+    └── 05-debt-schedule.png
+        │
+        ▼
+Net Income / Profitability Scenarios
