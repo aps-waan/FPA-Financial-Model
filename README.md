@@ -33,7 +33,7 @@ The core financial model incorporates:
 
 The statements are designed to work together as an integrated financial model.
 
-All financial figures are presented in USD millions where applicable.
+All financial figures are presented in ₹.
 
 ### 2. Debt Schedule
 
