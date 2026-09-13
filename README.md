@@ -171,6 +171,7 @@ Sensitivity Analysis
 
 ### Repository Structure ###
 
+```text
 FPA-Financial-Model/
 │
 ├── FPA_Financial_Model.xlsx
